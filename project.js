@@ -12,3 +12,16 @@ buttons.forEach(function(button){
     });
 
 });
+const menuLinks = document.querySelectorAll(".dropdown a");
+
+menuLinks.forEach(function(link){
+
+    link.addEventListener("click", function(event){
+
+        event.preventDefault();
+
+        alert("Kamu memilih menu " + this.innerText);
+
+    });
+
+});
