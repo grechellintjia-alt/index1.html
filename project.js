@@ -1,27 +1,45 @@
-const buttons = document.querySelectorAll(".product-card button");
+window.onload = function () {
+    alert("Welcome to Chell Food Store");
+};
 
-buttons.forEach(function(button){
+const menuButtons = document.querySelectorAll(".mainmenubtn");
 
-    button.addEventListener("click", function(){
+menuButtons.forEach(button => {
+    button.addEventListener("click", function () {
 
-        const product =
-        this.parentElement.querySelector("h3").innerText;
+        const dropdownContent = this.nextElementSibling;
 
-        alert(product + " berhasil ditambahkan!");
+      
+        document.querySelectorAll(".dropdown-child").forEach(menu => {
+            if (menu !== dropdownContent) {
+                menu.style.display = "none";
+            }
+        });
 
+       
+        if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+        } else {
+            dropdownContent.style.display = "block";
+        }
     });
-
 });
-const menuLinks = document.querySelectorAll(".dropdown a");
 
-menuLinks.forEach(function(link){
-
-    link.addEventListener("click", function(event){
-
-        event.preventDefault();
-
-        alert("Kamu memilih menu " + this.innerText);
-
-    });
-
+window.addEventListener("click", function (e) {
+    if (!e.target.matches(".mainmenubtn")) {
+        document.querySelectorAll(".dropdown-child").forEach(menu => {
+            menu.style.display = "none";
+        });
+    }
 });
+
+const welcomeText = document.querySelector(".welcome-text h1");
+
+let colors = ["#ff6b00", "#ff914d", "#ffb347", "#ff4500"];
+let index = 0;
+
+setInterval(() => {
+    welcomeText.style.color = colors[index];
+    index = (index + 1) % colors.length;
+}, 1000);
+
