@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #fff8f0;
+    background-color: #e4a1f0;
     color: #333;
     text-align: center;
 }
@@ -28,7 +28,7 @@ header img {
     margin: 20px;
 }
 .mainmenubtn {
-    background-color: #ff914d;
+    background-color: #f0a1dc;
     color: white;
     border: none;
     padding: 15px 25px;
@@ -39,7 +39,7 @@ header img {
 }
 
 .mainmenubtn:hover {
-    background-color: #ff6b00;
+    background-color: #f0a1bb;
 }
 
 .dropdown-child {
@@ -62,7 +62,7 @@ header img {
 }
 
 .dropdown-child a:hover {
-    background-color: #ffe0cc;
+    background-color: #d5f5f7;
     color: #ff6b00;
 }
 
@@ -76,13 +76,13 @@ header img {
 
 .welcome-text h1 {
     font-size: 40px;
-    color: #ff6b00;
+    color: #f7c3d5;
     text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
 }
 
 footer {
     margin-top: 80px;
-    background-color: #ff914d;
+    background-color: #c3d0f7;
     color: white;
     padding: 15px;
     font-size: 14px;
